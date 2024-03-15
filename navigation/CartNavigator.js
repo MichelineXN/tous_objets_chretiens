@@ -5,7 +5,7 @@ import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 
 
-//C'est l'écran panier
+//C'est l'écran panier. CartNavigator.js (pour la navigation du panier d'achat)
 
 const CartStack = createStackNavigator();
 

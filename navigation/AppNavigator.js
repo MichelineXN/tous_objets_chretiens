@@ -11,12 +11,14 @@ import S_inscrireScreen from "../components/Layout/screens/S_inscrireScreen";
 import React from "react";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 import {NavigationContainer} from "@react-navigation/native";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
 //J'importe HomeNavigator et l'assignez à un Drawer.Screen
 //J'importe ensuite chaque Stack Navigator dans le fichier principal de la navigation (AppNavigator.js dans cet exemple) et l'utilisez pour configurer le Drawer Navigator
 // qui est la structure de navigation de mon application.
 
 const Drawer = createDrawerNavigator();
+const Stack = createNativeStackNavigator();
 
 let SearchScreen;
 const AppNavigator = () => (
@@ -35,5 +37,15 @@ const AppNavigator = () => (
         </Drawer.Navigator>
     </NavigationContainer>
 );
+
+function AppNavigator() {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="Accueil" component={AccueilScreen} />
+            <Stack.Screen name="Articles" component={ArticlesScreen} />
+            // ... autres déclarations d'écrans
+        </Stack.Navigator>
+    );
+}
 
 export default AppNavigator;

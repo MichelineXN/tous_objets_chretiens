@@ -10,10 +10,9 @@ import PanierScreen from "../components/Layout/screens/PanierScreen";
 import S_inscrireScreen from "../components/Layout/screens/S_inscrireScreen";
 import React from "react";
 
+//Un Stack Navigator
 
-
-//Dans chacun de ces fichiers,
-//je définis un Stack Navigator pour cette section spécifique.
+//Dans chacun de ces fichiers,je définis un Stack Navigator pour cette section spécifique.
 
 const HomeStack = createStackNavigator();
 

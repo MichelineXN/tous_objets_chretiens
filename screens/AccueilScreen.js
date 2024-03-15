@@ -1,53 +1,32 @@
+// AccueilScreen.js
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-
-export default function AccueilScreen({ navigation }) {
+function AccueilScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Login</Text>
-      <TouchableOpacity
-        style = {styles.button}
-        onPress={() =>{
-          navigation.navigate('A_Propos');
-        }}>
-          <Text>Se connecter</Text>
-      </TouchableOpacity>
-    </View>
+      <View>
+        <Text>Page d'accueil</Text>
+        <Button
+            title="Aller aux articles"
+            onPress={() => navigation.navigate('Articles')}
+        />
+      </View>
   );
 }
 
-//export default function AccueilScreen({ navigation }) {
-  //return (
-    //<View style={styles.container}>
-     // <Text>AccueilScreen</Text>
-      //<TouchableOpacity style={styles.button}
-      //onPress={()=> {navigation.navigate('A_Propos')}}>
-      //<Text>Press to go to A_Propos</Text>
-      //</TouchableOpacity>
-   // </View>
-  //);
-//}
 
 
+// ArticlesScreen.js
+import React from 'react';
+import { View, Text } from 'react-native';
 
+function ArticlesScreen() {
+  return (
+      <View>
+        <Text>Liste des articles</Text>
+      </View>
+  );
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ADD8E6',
-    alignItems: 'center',
-    justifyContent: 'center',
+export default ArticlesScreen;
 
-  },
-  button: {
-    padding: 9,
-    backgroundColor: '#fff',
-    marginTop: 20,
-  },
-  text: {
-    color: '#000',
-    fontSize: 30,
-  }
-
-});
