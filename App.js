@@ -10,6 +10,7 @@ import DonScreen from './screens/DonScreen';
 import PanierScreen from './screens/PanierScreen';
 import S_InscrireScreen from './/screens/S_inscrireScreen';
 import ArticlesScreen from './screens/ArticlesScreen';
+import CheckoutScreen from './screens/CheckoutScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,7 @@ function App() {
           <Stack.Screen name="S_Inscrire" component={S_InscrireScreen} />
           <Stack.Screen name="Don" component={DonScreen} />
           <Stack.Screen name="Search" component={SearchScreen} />
+            <Stack.Screen name="Checkout" component={CheckoutScreen} />
         </Stack.Navigator>
       </NavigationContainer>
   );

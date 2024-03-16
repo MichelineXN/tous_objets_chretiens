@@ -1,32 +1,34 @@
 // AccueilScreen.js
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 function AccueilScreen({ navigation }) {
-  return (
-      <View>
-        <Text>Page d'accueil</Text>
-        <Button
-            title="Aller aux articles"
-            onPress={() => navigation.navigate('Articles')}
-        />
-      </View>
-  );
+    return (
+        <View style={styles.container}>
+            <Text style={styles.text}>Page d'accueil</Text>
+            <Button
+                title="Aller à À Propos"
+                onPress={() => navigation.navigate('A_Propos')}
+                color="#841584"
+            />
+        </View>
+    );
 }
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#007FFF',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 
+    text: {
+        color: '#000',
+        fontSize: 30,
+    }
+});
 
-// ArticlesScreen.js
-import React from 'react';
-import { View, Text } from 'react-native';
+export default AccueilScreen;
 
-function ArticlesScreen() {
-  return (
-      <View>
-        <Text>Liste des articles</Text>
-      </View>
-  );
-}
-
-export default ArticlesScreen;
 

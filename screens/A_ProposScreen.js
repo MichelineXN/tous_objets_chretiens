@@ -1,54 +1,32 @@
+// A_ProposScreen.js
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-
-
-
-
-export default function A_ProposScreen({navigation}) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>A_ProposScreen</Text>
-      <TouchableOpacity
-      style={styles.button}
-      onPress={()=> {navigation.navigate('Contact')}}>
-      <Text>Press to go to Contact</Text>
-      </TouchableOpacity>
-      
-    </View>
-  );
+function A_ProposScreen({ navigation }) {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.text}>À Propos de l'App</Text>
+            <Button
+                title="Retour à l'accueil"
+                onPress={() => navigation.navigate('Accueil')}
+                color="#841584" // Vous pouvez changer la couleur si vous le souhaitez
+            />
+        </View>
+    );
 }
 
-
-//export default function A_ProposScreen({navigation}) {
-  //return (
-    //<View style={styles.container}>
-      //<Text>A_ProposScreen</Text>
-     //<TouchableOpacity style={styles.button} 
-      //onPress={()=> {navigation.navigate('Articles')}}>
-      //<Text>Press to go to Articles</Text>
-      //</TouchableOpacity>
-      
-   // </View>
-  //);
-//}
-
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#green',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: 'jaune',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    text: {
+        color: '#000',
+        fontSize: 30,
+    },
 
-  button: {
-    padding: 9,
-    backgroundColor: '#fff',
-    marginTop: 20,
-  },
-  text: {
-    color: '#000',
-    fontSize: 30,
-  }
 });
+
+export default A_ProposScreen;

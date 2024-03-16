@@ -1,32 +1,30 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-export default function ArticlesScreen({ navigation }) {
+function ArticlesScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text>ArticlesScreen</Text>
-      <TouchableOpacity  style={styles.button}
-      onPress={()=> {navigation.navigate('Panier')}}>
-        <Text>Press to go to Panier</Text>
-      </TouchableOpacity>
-    </View>
+      <View style={styles.container}>
+        <Text style={styles.text}>Articles de l'App</Text>
+        <Button
+            title="Retour à l'accueil"
+            onPress={() => navigation.navigate('Accueil')}
+            color="#841584"
+        />
+      </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'yellow', // Modifier selon vos préférences
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  button: {
-    padding: 9,
-    backgroundColor: '#fff',
-    marginTop: 20,
   },
   text: {
     color: '#000',
     fontSize: 30,
-  }
+  },
 });
+
+export default ArticlesScreen;
